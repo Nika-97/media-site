@@ -1,0 +1,157 @@
+@import "../config.scss";
+@import "../media.scss";
+
+.service-main {
+    margin-top: 40px;
+
+    .socials-sidebar {
+        @include max1280 {
+            top: 31%;
+        }
+    }
+
+    &__heading {
+        display: flex;
+        @include max1050 {
+            flex-wrap: wrap;
+        }
+    }
+    &__left-block {
+        padding-top: 64px;
+        h1 {
+            margin-top: 10px;
+            width: 50%;
+            @include max1050 {
+                width: 100%;
+            }
+        }
+        @include max1050 {
+            padding-top: 0px;
+        }
+    }
+    &__subtitle {
+        margin-top: 40px;
+        font-weight: 500;
+        width: 65%;
+        @include max1050 {
+           width: 55%;
+           margin-top: 25px;
+        }
+        @include max576 {
+            width: 100%;
+        }
+    }
+    &__btn {
+        width: 181px;
+        margin-top: 50px;
+        @include max1050 {
+            margin-top: 30px;
+        }
+    }
+    &__img {
+        @include max1050 {
+            margin-top: 30px;
+            width: 100%;
+        }
+    }
+
+
+    &__content {
+        display: flex;
+        margin-top: 80px;
+
+        @include max576 {
+            margin-top: 60px;
+            flex-wrap: wrap;
+        }
+
+        .aside__feed {
+            @include max800 {
+                margin-left: 18%;
+            }
+            @include max576 {
+                margin-left: 0;
+                margin-top: 60px;
+            }
+        }
+    }
+    &__info {
+        @include max1050 {
+            width: 75%;
+        }
+        @include max800 {
+            width: 65%;
+        }
+        @include max576 {
+            width: 100%;
+        }
+    }
+    &__text {
+        p {
+            margin-bottom: 22px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__feedback {
+        margin-top: 40px;
+        .subtitle {
+            width: 50%;
+            line-height: 140%;
+            @include max1050 {
+                width: 70%;
+            }
+            @include max800 {
+                width: 90%;
+            }
+            @include max576 {
+                width: 100%;
+            }
+            a {
+                display: inline-block;
+            }
+        }
+
+        .feedback__form {
+            @include max800 {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.services {
+    @include max1050 {
+        margin-top: 60px;
+    }
+    &__descr-text {
+        margin-top: 40px;
+        font-size: 16px;
+        width: 55%;
+        @include max1050 {
+            width: 70%;
+        }
+        @include max576 {
+            width: 100%;
+        }
+    }
+
+    &__block {
+        margin-bottom: 80px;
+    }
+    &__content {
+        width: 75%;
+        p {
+            margin-bottom: 22px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        @include max576 {
+            width: 100%;
+        }
+    }
+}

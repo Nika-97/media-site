@@ -1,0 +1,199 @@
+@import "../config.scss";
+@import "../media.scss";
+
+.expert {
+    margin-top: 40px;
+
+    .socials-sidebar {
+        @include max1280 {
+            top: 25%;
+        }
+    }
+
+    &__heading {
+        display: flex;
+        @include max1050 {
+            flex-wrap: wrap;
+        }
+        img {
+            @include max576 {
+                margin: 0 auto;
+            }
+        }
+    }
+
+    &__heading-content {
+        padding-top: 49px;
+        width: 50%;
+        margin-left: 105px;
+        @include max800 {
+            margin-left: 0;
+            width: 70%;
+        }
+        @include max576 {
+            width: 100%;
+        }
+        h1 {
+            margin-top: 10px;
+        }
+    }
+    &__subtitle {
+        font-size: 18px;
+        font-weight: 400;
+        margin-top: 30px;
+    }
+
+    &__stats {
+        margin-top: 56px;
+        display: flex;
+        @include max576 {
+            margin-top: 36px;
+        }
+    }
+    &__stats-item {
+        font-weight: 400;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+        margin-right: 30px;
+        &:last-child {
+            margin-right: 0;
+        }
+        img {
+            margin-right: 5px;
+        }
+    }
+
+    &__socials {
+        margin-top: 36px;
+        display: flex;
+        a {
+            margin-right: 19px;
+            transition: 0.2s;
+            &:last-child {
+                margin-right: 0;
+            }
+            &:hover {
+                transform: scale(120%);
+                transition: 0.2s;
+            }
+        }
+    }
+
+    &__text {
+        margin-top: 80px;
+        width: 75%;
+        @include max800 {
+            margin-top: 50px;
+        }
+        @include max576 {
+            width: 100%;
+        }
+        p {
+            margin-bottom: 22px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__publications {
+        margin-top: 80px;
+        @include max800 {
+            margin-top: 60px;
+        }
+    }
+    &__publications-preview {
+        margin-top: 60px;
+        display: flex;
+        justify-content: space-between;
+        @include max800 {
+            flex-wrap: wrap;
+        }
+        @include max576 {
+            margin-top: 40px;
+        }
+
+        .news-item {
+            width: 400px;
+            @include max1050 {
+                width: 33%;
+            }
+            @include max800 {
+                width: 49%;
+            }
+            @include max576 {
+                width: 100%;
+            }
+        }
+
+        .news-item__title {
+            font-weight: 600;
+            font-size: 22px;
+            margin-top: 30px;
+            width: 100%;
+        }
+
+        .news-item__img-block {
+            height: 271px;
+            @include max1050 {
+                height: 22vw;
+            }
+            @include max800 {
+                height: 31vw;
+            }
+            @include max576 {
+                height: 61vw;
+            }
+        }
+
+        .news-item__info {
+            margin-top: 18px;
+            padding-right: 0;
+            justify-content: unset;
+        }
+        .news-item__data {
+            border: none;
+            font-size: 14px;
+            text-shadow: none;
+            padding-left: 17px;
+        }
+        .news-item__descr {
+            height: 72px;
+            @include max1050 {
+                height: 90px;
+            }
+            @include max800 {
+               height: 72px;
+            }
+        }
+        .news-item__tags {
+            margin-top: 15px;
+            @include max1050 {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.experts-block {
+    margin-top: 100px;
+    @include max800 {
+        margin-top: 60px;
+    }
+    &__descr {
+        margin-top: 40px;
+        font-size: 16px;
+        width: 55%;
+        @include max1050 {
+            width: 70%;
+        }
+        @include max576 {
+            width: 100%;
+        }
+    }
+    &__members {
+        margin-top: 60px;
+    }
+}

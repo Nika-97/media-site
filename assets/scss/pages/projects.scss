@@ -1,0 +1,69 @@
+@import "../config.scss";
+@import "../media.scss";
+
+.projects {
+  .container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .socials-sidebar {
+    top: 5%;
+    @include max1280 {
+      top: 3%;
+      left: 80%;
+    }
+  }
+}
+
+.aside {
+  width: 25%;
+  margin-top: 60px;
+  @include max576 {
+    width: 100%;
+    margin: 0;
+  }
+}
+.content {
+  width: 75%;
+  @include max800 {
+    width: 69%;
+  }
+  @include max576 {
+    width: 100%;
+  }
+}
+
+h1 {
+  width: 100%;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+.projects__block {
+  margin-top: 70px;
+  width: 100%;
+}
+
+.projects {
+  margin-top: unset;
+  .first-paragraf {
+    width: 65%;
+    @include max576 {
+      width: 100%;
+    }
+  }
+}
+
+.content {
+  margin-top: 60px;
+  p {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 130%;
+    /* or 21px */
+
+    color: #000000;
+    margin-bottom: 40px;
+  }
+}

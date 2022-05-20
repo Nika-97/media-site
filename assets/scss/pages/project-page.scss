@@ -1,0 +1,295 @@
+@import "../config.scss";
+@import "../media.scss";
+
+.project-main {
+    margin-top: 40px;
+
+    .socials-sidebar {
+        @include max1280 {
+            top: 0;
+        }
+    }
+
+    &__heading {
+        display: flex;
+        position: relative;
+        @include max1050 {
+            flex-wrap: wrap;
+        }
+        img {
+            position: relative;
+            right: -6%;
+            @include max1050 {
+                width: 100%;
+                right: 0;
+                margin-top: 40px;
+            }
+        }
+    }
+    &__heading-left {
+        padding-top: 80px;
+        @include max1050 {
+            padding-top: 0;
+        }
+        h1 {
+            width: 105%;
+            @include max1050 {
+                width: 100%;
+            }
+        }
+    }
+
+    &__status {
+        line-height: 130%;
+        margin-top: 15px;
+        display: block;
+    }
+    &__descr {
+        line-height: 130%;
+        margin-top: 15px;
+        display: block;
+    }
+
+    &__content {
+        margin-top: 60px;
+        display: flex;
+        @include max576 {
+            margin-top: 60px;
+            flex-wrap: wrap;
+        }
+
+        .aside__feed {
+            margin-top: 140px;
+            @include max1050 {
+                margin-top: 0px;
+                margin-left: 26%;
+            }
+            @include max800 {
+                margin-left: 20%;
+            }
+            @include max576 {
+                margin-left: 0;
+                margin-top: 60px;
+            }
+        }
+    }
+
+    &__info {
+        @include max1050 {
+            width: 73%;
+        }
+        @include max800 {
+            width: 65%;
+        }
+        @include max576 {
+            width: 100%;
+        }
+    }
+
+    &__text {
+        p {
+            margin-bottom: 22px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__video-block {
+        margin-top: 40px;
+    }
+    &__video {
+        margin-top: 30px;
+        position: relative;
+        img {
+
+            @include max1050 {
+                width: 100%;
+            }
+        }
+    }
+    &__video-bg {
+        position: absolute;
+        width: 100%;
+        height: 99.5%;
+        top: 0;
+        left: 0;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+        @include max576 {
+            height: 99%;
+        }
+    }
+    &__video-play {
+        position: absolute;
+        top: 42%;
+        left: 46%;
+        transition: 0.2s;
+        &:hover {
+            transition: 0.2s;
+            transform: scale(110%);
+        }
+        @include max1050 {
+            width: auto !important;
+        }
+        @include max800 {
+            top: 34%;
+            left: 42%;
+        }
+        @include max576 {
+            width: 17% !important;
+        }
+    }
+
+    &__docs {
+        margin-top: 100px;
+        @include max576 {
+            margin-top: 60px;
+        }
+    }
+    &__document {
+        margin-bottom: 60px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__document-download {
+        display: flex;
+        margin-top: 20px;
+        align-items: center;
+        @include max360 {
+            flex-wrap: wrap;
+        }
+        .doc-load-btn {
+            width: 181px;
+            @include max360 {
+                width: 100%;
+            }
+        }
+        .doc-info {
+            font-size: 22px;
+            line-height: 130%;
+            display: block;
+            margin-left: 30px;
+            @include max576 {
+                margin-left: 8px;
+            }
+            @include max360 {
+                margin-left: 30px;
+                margin-top: 15px;
+                &:first-of-type {
+                    margin-left: 0px;
+                }
+            }
+        }
+    }
+
+    &__sharing {
+        margin-top: 100px;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 30px 0;
+        display: flex;
+        align-items: center;
+
+        @include max800 {
+            align-items: flex-start;
+        }
+        @include max576 {
+            flex-wrap: wrap;
+            padding: 20px 0;
+        }
+
+        .subtitle {
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+    }
+    &__sharing-left {
+        display: flex;
+        align-items: center;
+        @include max800 {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__stats {
+        margin-top: 0;
+        margin-left: 40px;
+        margin-right: 373px;
+        display: flex;
+        @include max1050 {
+            margin-bottom: 0;
+            margin-right: 166px;
+        }
+        @include max800 {
+            margin-left: 0;
+            margin-top: 15px;
+            margin-right: 0;
+        }
+        @include max576 {
+            width: 100%;
+        }
+    }
+
+    &__stats-item {
+        margin-bottom: 0;
+        margin-right: 30px;
+        display: flex;
+        align-items: center;
+        &:last-child {
+            margin-right: 0;
+        }
+        img {
+            margin-right: 6px;
+        }
+    }
+
+    &__sharing-right {
+        display: flex;
+        @include max576 {
+            margin-top: 35px;
+        }
+    }
+
+    &__sharing-icon {
+        margin-left: 41px;
+        cursor: pointer;
+        transition: 0.2s;
+        &:hover {
+            transform: scale(115%);
+            transition: 0.2s;
+        }
+        @include max1050 {
+            width: auto !important;
+        }
+        @include max800 {
+            margin-left: 20px;
+        }
+    }
+}
+
+.projects {
+    margin-top: 84px;
+    @include max1050 {
+        margin-top: 60px;
+    }
+    &__descr-text {
+        margin-top: 40px;
+        font-size: 16px;
+        width: 55%;
+        @include max1050 {
+            width: 70%;
+        }
+        @include max576 {
+            width: 100%;
+        }
+    }
+
+    &__block {
+        margin-bottom: 150px;
+    }
+}
+
+.footer {
+    margin-top: 0;
+}

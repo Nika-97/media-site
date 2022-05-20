@@ -1,0 +1,176 @@
+@import "../config.scss";
+@import "../media.scss";
+
+.about-main {
+    margin-top: 40px;
+    .container {
+        display: flex;
+        @include max1050 {
+            flex-wrap: wrap;
+        }
+    }
+
+    .socials-sidebar {
+        top: 6%;
+
+        @include max1280 {
+            top: 1%;
+            left: 50.5%;
+        }
+    }
+
+    &__left-block {
+        img {
+            position: relative;
+            margin-top: 60px;
+            left: -20%;
+
+            @include max1450 {
+                left: -15%;
+            }
+            @include max1050 {
+                left: 0;
+            }
+            @include max576 {
+                width: 100%;
+            }
+        }
+    }
+
+    &__project-title {
+        font-weight: 800;
+        font-size: 50px;
+        line-height: 130%;
+        text-transform: uppercase;
+        background: radial-gradient(#000, rgba(0, 0, 0, 0.56));
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        display: block;
+        margin-top: 30px;
+    }
+
+    &__subtitle {
+        font-size: 18px;
+        line-height: 130%;
+        font-weight: 500;
+        margin-top: 20px;
+        width: 50%;
+        @include max576 {
+            width: 100%;
+        }
+    }
+
+    &__right-block {
+        padding-top: 82px;
+        @include max576 {
+            padding-top: 45px;
+        }
+    }
+
+    &__subscribe {
+        .subscribe__input {
+            width: 281px;
+        }
+        .subscribe__btn {
+            width: 113px;
+        }
+    }
+
+    &__text {
+        margin-top: 52px;
+        p {
+            margin-bottom: 21px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__content {
+        margin-top: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        @include max1050 {
+            align-items: center;
+        }
+        .about__video {
+            @include max576 {
+                width: 100%;
+            }
+        }
+        .about__pdf {
+            margin-bottom: 0;
+            @include max576 {
+                width: 100%;
+                margin-top: 40px;
+                
+            }
+        }
+        .contact-us-btn {
+            width: 139px;
+            margin-top: 40px;
+            @include max1050 {
+                margin-top: 0px;
+            }
+            @include max576 {
+                margin-top: 40px;
+            }
+        }
+    }
+}
+
+.about {
+    margin-top: 100px;
+    background: none;
+    padding-bottom: 0;
+    @include max576 {
+        margin-top: 50px;
+    }
+    &__descr-first {
+        margin-top: 0;
+        font-size: 20px;
+        width: 90%;
+        @include max576 {
+            width: 100%;
+        }
+    }
+
+    &__info {
+        margin-top: 72px;
+        @include max576 {
+            margin-top: 20px;
+        }
+    }
+
+    &__descr-second {
+        font-size: 20px;
+        width: 65%;
+        @include max1050 {
+            width: 90%;
+        }
+        @include max576 {
+            width: 100%;
+        }
+    }
+}
+
+.services {
+    &__descr-text {
+        margin-top: 40px;
+        font-size: 16px;
+        width: 55%;
+        @include max1050 {
+            width: 70%;
+        }
+        @include max576 {
+            width: 100%;
+        }
+    }
+
+    &__feedback {
+        .feedback__form {
+            margin-top: 20px;
+        }
+    }
+}

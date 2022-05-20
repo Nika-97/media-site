@@ -1,0 +1,228 @@
+@import "../media";
+
+
+.burger-submenu {
+  background:#252733;
+  position: fixed;
+
+  top: 0;
+  width: 50%;
+  height: 100vh;
+  z-index: 9999;
+  right: 0;
+  color: #FFFFFF;
+  padding: 0 30px;
+  padding-top: 20px;
+  padding-bottom: 36px;
+  font-size: 20px;
+  line-height: 21px;
+  right: -61%;
+  opacity: 0;
+  padding-top: 20px;
+  @include max576 {
+    width: 100%;
+    right: -120%;
+  }
+
+
+
+  transition: all 0.3s ease-out;
+
+  &.active {
+    transition: all 0.3s ease-out;
+    right: 0;
+    opacity: 1;
+  }
+  .burger-btn {
+    background: url(../img/burger-white.svg) no-repeat;
+    background-size: contain;
+    @include max576 {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  &__back {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 21px;
+    color: #E16848;
+    text-transform: uppercase;
+    margin-top: 32px;
+    position: relative;
+    margin-bottom: 32px;
+    margin-top: 42px;
+    &::before {
+      content: "";
+      display: inline-block;
+      height: 10px;
+      width: 18px;
+      background: url(../img/small-back.svg) no-repeat;
+      background-size: contain;
+      margin-right: 5px;
+      margin-left: 22px;
+      //position: absolute;
+      //right: 0;
+      //top: 16px;
+    }
+    @include max576 {
+      font-size:14px;
+    }
+  }
+
+  &__item-name {
+    margin-top: 30%;
+    list-style: none;
+    font-size: 30px;
+    line-height: 48px;
+    font-weight: 100;
+    text-transform: uppercase;
+    padding-left: 49px;
+    @include max576 {
+      margin-top: 20px;
+      font-size: 16px;
+      line-height: 21px;
+      margin-bottom: 30px;
+    }
+  }
+ &__list {
+   list-style: none;
+   font-size: 30px;
+   line-height: 48px;
+   font-weight: 100;
+   padding-left: 49px;
+   @include max576 {
+     font-size: 16px;
+     line-height: 21px;
+   }
+   li {
+     @include max576 {
+       margin-bottom: 30px;
+     }
+   }
+
+  }
+}
+.mobile-logo {
+  img {
+    width: 35px;
+  }
+}
+.burger-menu {
+
+  top: 0;
+  background:#252733;
+  position: fixed;
+  width: 50%;
+  height: 100vh;
+  z-index: 9999;
+  right: 0;
+  color: #FFFFFF;
+  padding: 0 30px;
+  padding-bottom: 36px;
+  font-size: 20px;
+  line-height: 21px;
+  right: -61%;
+  opacity: 0;
+  transition: all 0.3s ease-out;
+  padding-top: 20px;
+
+  @include max576 {
+    width: 100%;
+    right: -120%;
+    //right: 0;
+    //opacity: 1;
+  }
+
+  &.active {
+    transition: all 0.3s ease-out;
+    right: 0;
+    opacity: 1;
+  }
+  &__list {
+    list-style: none;
+    font-size: 30px;
+    line-height: 48px;
+    font-weight: 100;
+    margin-top: 30%;
+    padding-left: 49px;
+    @include max576 {
+      font-size: 16px;
+      line-height: 21px;
+      margin-top: 75px;
+
+
+    }
+    li {
+      position: relative;
+      @include max576 {
+        margin-bottom: 30px;
+      }
+      &.burger-menu__slide-menu::after {
+        content: "";
+        display: inline-block;
+        height: 14px;
+        width: 10px;
+        background: url(../img/menu-arr.svg) no-repeat;
+        background-size: contain;
+        position: absolute;
+        right: 0;
+        top: 16px;
+        @include max576 {
+          top: 7px;
+          height: 9px;
+        }
+
+
+      }
+    }
+    ul {
+      display: none;
+    }
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .burger-btn {
+    background: url(../img/burger-white.svg) no-repeat;
+    background-size: contain;
+    @include max576 {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  &__footer {
+    position: absolute;
+    bottom: 10vh;
+    padding-left: 49px;
+    width: 240px;
+    a {
+      color: #E16848;
+      margin-bottom: 20px;
+      @include max576 {
+        font-size: 16px;
+      }
+    }
+    .socials__block {
+      width: 100%;
+      margin: 0;
+      margin-top: 30px;
+
+    }
+  }
+
+}
+
+.burger-menu-bg {
+  position: fixed;
+  z-index: 9999;
+  background: rgba(255,255,255,0.5);
+  width: 100%;
+  height: 100%;
+  display: none;
+
+  top: 0;
+}

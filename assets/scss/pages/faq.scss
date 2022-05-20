@@ -1,0 +1,45 @@
+@import "../config.scss";
+@import "../media.scss";
+
+.faq .container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+
+  .socials-sidebar {
+    top: 4%;
+    left: -6%;
+    @include max1370 {
+      left: -5%;
+    }
+    @include max1280 {
+      left: 82%;
+    }
+  }
+}
+.first-paragraf {
+  width: 65%;
+  @include max576 {
+    width: 100%;
+  }
+}
+
+h1 {
+  width: 100%;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.faq__tabs-wrap {
+  margin-top: 40px;
+  width: 100%;
+  margin-bottom: 34px;
+}
+
+.faq__accordion {
+  width: 100%;
+}
+
+.feedback {
+  margin-top: 70px;
+}

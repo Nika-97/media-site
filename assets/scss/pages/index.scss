@@ -1,0 +1,688 @@
+@import "../config.scss";
+@import "../media.scss";
+
+.socials-sidebar {
+    top: 42%;
+    left: -6%;
+    @include max1370 {
+        left: -3%;
+    }
+    @include max1280 {
+        display: block;
+        left: 0;
+    }
+    @include max1050 {
+        display: flex;
+        top: 87%;
+        left: 3%;
+    }
+
+    &__first {
+        @include max1280 {
+            display: block;
+        }
+        @include max1050 {
+            display: flex;
+        }
+    }
+
+    &__second {
+        @include max1280 {
+            display: block;
+            margin-left: 0;
+            margin-top: 31px;
+        }
+        @include max1050 {
+            display: flex;
+            margin-top: 0;
+            margin-left: 20px;
+        }
+    }
+
+    &__icon {
+        @include max1280 {
+            margin-right: 0;
+            margin-bottom: 12px;
+        }
+
+        @include max1050 {
+            margin-bottom: 0;
+            margin-right: 20px;
+            &:last-child {
+                margin-right: 0px;
+            }
+        }
+
+        @include max360 {
+            width: 35px;
+            height: 35px;
+        }
+
+        img {
+            @include max360 {
+                width: 35px;
+                height: 35px;
+            }
+        }
+    }
+}
+
+.main-section {
+    position: relative;
+    @include max576 {
+        background: url(../../img/main-bg.png) no-repeat;
+        background-size: cover;
+        background-position: 30% 0%;
+    }
+    &__background {
+        position: absolute;
+        top: 0;
+        left: 44%;
+        z-index: -1;
+        @include max1050 {
+            left: 24%;
+        }
+        @include max800 {
+            left: 16%;
+        }
+        @include max576 {
+            display: none;
+        }
+    }
+
+    &__content {
+        margin-top: 235px;
+        margin-bottom: 114px;
+        margin-left: 121px;
+        @include max1050 {
+            margin-left: 0px;
+        }
+        @include max576 {
+            margin-top: 125px;
+        }
+    }
+
+    &__main-title {
+        font-weight: 800;
+        font-size: 60px;
+        line-height: 78px;
+        text-transform: uppercase;
+        background: radial-gradient(#000, rgba(0, 0, 0, 0.56));
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        @include max576 {
+            font-size: 48px;
+            line-height: 60px;
+            // text-align: center;
+        }
+    }
+
+    &__subtitle {
+        font-size: 18px;
+        line-height: 23px;
+        margin-top: 45px;
+        width: 33%;
+        color: #000;
+        @include max576 {
+            // text-align: center;
+            // margin: 0 auto;
+            // margin-top: 45px;
+            width: 75%;
+            font-weight: 400;
+        }
+    }
+}
+
+//Сайдбар
+.aside {
+    &__feed {
+        margin-top: 241px;
+        @include max800 {
+            margin-top: 80px;
+        }
+    }
+}
+.aside {
+    @include max576 {
+        margin-top: 60px;
+    }
+}
+.main-news {
+    margin-top: 65px;
+    @include max576 {
+        margin-top: 0px;
+    }
+    .container {
+        display: flex;
+        @include max576 {
+            flex-wrap: wrap;
+            //flex-direction: column-reverse;
+        }
+    }
+
+    &__popular {
+        margin-top: 80px;
+        .news-large-item {
+            @include max1050 {
+                height: 24vw;
+            }
+            @include max800 {
+                height: 31vw;
+            }
+            @include max576 {
+                height: 61vw;
+                width: 100%;
+                margin-top: 20px;
+                &:first-child {
+                    margin-top: 0px;
+                }
+            }
+        }
+
+        @include max800 {
+            width: 141%;
+        }
+        @include max576 {
+            width: 100%;
+            margin-top: 60px;
+        }
+    }
+
+    &__near-aside {
+        @include max1050 {
+            width: 75%;
+        }
+        @include max576 {
+            width: 100%;
+            margin-top: 60px;
+        }
+    }
+}
+
+.popular-news {
+    margin-top: 80px;
+
+    .container {
+        display: flex;
+    }
+}
+
+// BREAKING NEWS BLOCK (SLIDER)
+
+.breaking-news {
+    margin-top: 80px;
+    @include max576 {
+        margin-top: 60px;
+    }
+    .container {
+        width: 1320px;
+        left: 2%;
+        @include max1370 {
+            left: 3%;
+        }
+        @include max1050 {
+            width: 100%;
+            left: 0;
+        }
+    }
+
+    &__block {
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        width: 315px;
+        height: 100px;
+        background: $light-gray;
+        padding: 14px 20px;
+        display: flex;
+
+        img {
+            width: 59px !important;
+            height: 59px;
+            border-radius: 50%;
+        }
+    }
+
+    &__descr {
+        margin-left: 19px;
+    }
+
+    &__topic {
+        font-size: 10px;
+        line-height: 130%;
+        font-weight: 600;
+        font-style: italic;
+    }
+
+    &__title {
+        font-size: 16px;
+        line-height: 110%;
+        margin-top: 4px;
+    }
+
+    &__info {
+        margin-top: 6px;
+        display: flex;
+
+        .date {
+            margin-left: 24px;
+            margin-right: 0px;
+        }
+
+        .views {
+            margin-left: 24px;
+        }
+    }
+}
+
+// .services {
+//     &__block {
+//         display: flex;
+//         justify-content: space-between;
+//         @include max1050 {
+//             flex-wrap: wrap;
+//         }
+//     }
+// }
+
+// MEDIA BLOCK (PHOTO, VIDEOS)
+// GRID FOTO video
+
+.media-block {
+    margin-top: 100px;
+    margin-bottom: 170px;
+    @include max800 {
+        margin-bottom: 80px;
+    }
+    @include max576 {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+
+    &__descr {
+        margin-top: 20px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        @include max576 {
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            @include max576 {
+                margin-top: 20px;
+            }
+        }
+    }
+
+    &__descr-text {
+        font-size: 18px;
+        width: 37%;
+        @include max576 {
+            width: 88%;
+        }
+    }
+
+    //&__grid {
+    //    margin-top: 80px;
+    //
+    //    display: grid;
+    //    height: 610px;
+    //    grid-template-columns: repeat(16, 1fr);
+    //    grid-template-rows: repeat(14, 1fr);
+    //}
+
+    .grid {
+        width: 1240px;
+        @include max1050 {
+            width: 100%;
+        }
+
+        position: relative;
+
+        margin-top: 80px;
+        @include max576 {
+            margin-top: 60px;
+        }
+        .col {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 49%;
+            @include max1050 {
+                //width: 100%;
+            }
+            @include max576 {
+                width: 100%;
+            }
+        }
+
+        .block {
+            display: flex;
+            justify-content: space-between;
+            opacity: 0;
+            position: relative;
+            top: 40px;
+            transform: scale(0.9);
+            @include max1050 {
+                flex-wrap: wrap;
+            }
+        }
+
+        .block.animate {
+            opacity: 1;
+            top: 0px;
+            transition: all 0.3s ease-in-out;
+            transform: scale(1);
+        }
+
+        .grid-item {
+            cursor: pointer;
+            position: relative;
+
+            &:hover {
+                img {
+                    transform: scale(115%);
+                    transition: all 0.3s ease-out;
+                }
+            }
+
+            img {
+                transition: all 0.3s ease-out;
+            }
+
+            &__content {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+            }
+
+            &__bottom {
+                position: absolute;
+                width: 100%;
+                bottom: 0px;
+                padding: 15px 20px;
+            }
+
+            &__date {
+                width: 100%;
+                font-size: 14px;
+                line-height: 130%;
+                color: #fff;
+                //text-shadow: 0 4px 4px rgba(0, 0 0 / 10%);
+                height: fit-content;
+                //padding-left: 10px;
+            }
+
+            &__title {
+                width: 100%;
+                margin-top: 9px;
+                font-size: 16px;
+                line-height: 130%;
+                font-weight: 400;
+                color: #fff;
+                /* text-shadow: 0px 4px 4px rgb(0 0 0 / 10%); */
+                width: 80%;
+                @include max800 {
+                    width: 100%;
+                }
+                @include max360 {
+                    font-size: 14px;
+                }
+            }
+
+            &__topics {
+                margin-top: 9px;
+                width: 100%;
+            }
+        }
+
+        .grid-item1 {
+            width: 48%;
+            height: 269px;
+            background-color: #efefef;
+            display: inline-block;
+            margin-bottom: 20px;
+            overflow: hidden;
+            @include max1050 {
+                height: 21vw;
+            }
+            @include max576 {
+                width: 100%;
+                height: 88vw;
+            }
+
+            img,
+            video {
+                width: 100%;
+            }
+        }
+
+        .grid-item2 {
+            width: 100%;
+            height: 580px;
+            background-color: #efefef;
+            margin-bottom: 20px;
+            overflow: hidden;
+
+            @include max1050 {
+                height: 44.6vw;
+            }
+            @include max576 {
+                height: 85vw;
+            }
+            .grid-item__title {
+                font-size: 24px;
+                @include max360 {
+                    font-size: 20px;
+                }
+            }
+
+            img,
+            video {
+                width: 171%;
+                position: relative;
+                left: -37%;
+            }
+        }
+
+        .grid-item3 {
+            width: 100%;
+            height: 290px;
+            background-color: #efefef;
+            margin-bottom: 20px;
+            overflow: hidden;
+            @include max1050 {
+                height: 21vw;
+            }
+            @include max576 {
+                height: 43vw;
+            }
+
+            img,
+            video {
+                width: 100%;
+            }
+        }
+    }
+
+    .btn {
+        margin-top: 20px;
+    }
+}
+
+// SLIDER WITH LEFT TITLE BLOCK
+
+.news-slider {
+    margin-bottom: 60px;
+
+    .container {
+        display: flex;
+        @include max800 {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__descr {
+        width: 295px;
+        position: relative;
+        @include max1050 {
+            width: 36%;
+        }
+        @include max800 {
+            width: 50%;
+        }
+        @include max576 {
+            width: 100%;
+        }
+
+        &::before {
+            content: "";
+            background-color: $light-gray;
+            height: 282px;
+            position: absolute;
+            width: 648px;
+            left: -120%;
+            z-index: -1;
+            @include max1050 {
+                left: -82%;
+            }
+            @include max800 {
+                left: -79%;
+            }
+            @include max576 {
+                left: -7%;
+                width: 120%;
+            }
+        }
+    }
+
+    &__title {
+        margin-top: 27px;
+    }
+
+    &__descr-text {
+        font-size: 18px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        width: 85%;
+    }
+
+    &__preview {
+        margin-left: 20px;
+        width: 924px;
+        @include max1050 {
+            width: 60%;
+        }
+        @include max800 {
+            width: 100%;
+            margin-top: 60px;
+            margin-left: 0px;
+        }
+
+        .news-item {
+            width: 295px;
+        }
+
+        .news-item__img-block {
+            @include max576 {
+                height: 56vw;
+            }
+        }
+
+        .owl-nav {
+            position: absolute;
+            top: 46.4%;
+            left: -19%;
+            @include max1050 {
+                top: 50.4%;
+                left: -26%;
+            }
+            @include max800 {
+                top: -100px;
+                left: 25%;
+            }
+            @include max576 {
+                left: 60%;
+            }
+        }
+    }
+
+    .owl-carousel .owl-nav button.owl-prev {
+        width: 40px;
+        height: 40px;
+        border: 1px solid #000000;
+        color: $main-color;
+        margin-right: 34px;
+        font-size: 0px;
+        background: url(../../img/left-chevr.svg) no-repeat;
+        background-position: 50% 50%;
+    }
+
+    .owl-carousel .owl-nav button.owl-next {
+        width: 40px;
+        height: 40px;
+        border: 1px solid #000000;
+        color: $main-color;
+        font-size: 0px;
+        background: url(../../img/left-chevr.svg) no-repeat;
+        background-position: 50% 50%;
+        transform: rotate(180deg);
+    }
+
+    .owl-carousel .owl-item img {
+        display: inline-block;
+        width: auto;
+    }
+}
+
+// FAQ
+
+.faq {
+    margin-top: 100px;
+    @include max576 {
+        margin-top: 60px;
+    }
+
+    &__descr {
+        margin-top: 20px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        @include max576 {
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            @include max576 {
+                margin-top: 20px;
+            }
+        }
+    }
+
+    &__descr-text {
+        font-size: 18px;
+        width: 37%;
+        @include max1050 {
+            width: 50%;
+        }
+        @include max576 {
+            width: 88%;
+        }
+    }
+
+    &__tabs-wrap {
+        margin-top: 40px;
+    }
+
+    &__accordion {
+        margin-top: 34px;
+    }
+}

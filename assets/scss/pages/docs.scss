@@ -1,0 +1,117 @@
+@import "../config.scss";
+@import "../media.scss";
+
+.docs .container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+.first-paragraf {
+  width: 65%;
+  @include max576 {
+    width: 100%;
+  }
+}
+
+h1 {
+  width: 100%;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.docs {
+  .socials-sidebar {
+    top: 12%;
+    left: -6%;
+    @include max1370 {
+      left: -5%;
+    }
+    @include max1280 {
+      top: 6%;
+      left: 82%;
+    }
+  }
+
+  &__wrap {
+    margin-top: 80px;
+  }
+  &__item {
+    margin-top: 60px;
+    &:first-child {
+      margin-top: 0px;
+    }
+  }
+  &__item-title {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 130%;
+    /* identical to box height, or 29px */
+
+    color: #252733;
+  }
+
+  &__item-download {
+    margin-top: 20px;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 130%;
+    display: flex;
+    align-items: center;
+    /* identical to box height, or 29px */
+    color: #252733;
+    @include max576 {
+      font-size: 16px;
+    }
+    .btn {
+      width: 181px;
+      margin-right: 30px;
+    }
+    @include max576 {
+      margin-right: 16px;
+    }
+  }
+  &__item-type {
+    margin-right: 30px;
+    @include max576 {
+      margin-right: 16px;
+    }
+  }
+
+  &__accordion-btn {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 130%;
+    /* or 18px */
+    margin-top: 20px;
+    color: #252733;
+    cursor: pointer;
+    &::after {
+      content: "";
+      display: inline-block;
+      background: url(../../img/plus2.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 20px;
+      height: 20px;
+      position: relative;
+      top: 6px;
+      margin-left: 16px;
+    }
+  }
+
+  &__accordion-content {
+    margin-top: 30px;
+    width: 65%;
+    display: none;
+
+    @include max576 {
+      width: 100%;
+    }
+    p {
+      margin-bottom: 30px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
